@@ -19,7 +19,6 @@ console.log(userNumber);
 const pcNumber = rndNumber(1, 5);
 console.log(pcNumber);
 
-// FUNZIONE 
 function rndNumber(min, max) {
     const rndNumber = Math.floor(Math.random() * (max - min + 1) ) + min;
     return rndNumber;
@@ -30,18 +29,23 @@ const sumNumber = userNumber + pcNumber;
 console.log(sumNumber);
 
 //definisco se il numero è pari o dispari
-
-function oddOrEven(sumNumber) {
-    let message = "";
-    if(sumNumber % 2 === 0){
-        message = "La somma è pari"
-    } else {
-        message = "la somma è dispari"
-    }
-    console.log(message);
-    return message;
+let oddOrEven = ""
+if(sumNumber % 2 == 0){
+    oddOrEven = "pari"
+} else {
+    oddOrEven = "dispari"
 }
+console.log(oddOrEven);
+  
 
+//Dichiaro il vincitore
+let defineWinner = "";
+if(userChoice === oddOrEven){
+    defineWinner = "Hai vinto"
+}else {
+    defineWinner = "Hai perso"
+}
+console.log(defineWinner);
 
 
 
